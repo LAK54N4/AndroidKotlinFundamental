@@ -6,16 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/dice_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="75dp"
         android:layout_marginBottom="32dp"
-        android:text="Hello World!"
-        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRoll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/empty_disc"
+        tools:src="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/dice_image2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/btnRoll"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:srcCompat="@drawable/empty_disc"
+        tools:src="@drawable/dice_1" />
 
     <Button
         android:id="@+id/btnRoll"
@@ -28,22 +41,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnCountUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/count_up_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnReset" />
-
-    <Button
         android:id="@+id/btnReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/reset_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRoll" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
